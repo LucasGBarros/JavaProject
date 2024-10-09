@@ -30,5 +30,10 @@ public class Main {
         } else {
             System.out.println("Senha incorreta.");
         }
+
+        int classificação = (int) (media / 2);
+        System.out.println(classificação);
+
+
     }
 }
