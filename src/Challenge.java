@@ -1,5 +1,3 @@
-import javax.sound.midi.Soundbank;
-
 public class Challenge {
     public static void main(String[] args) {
         System.out.println("Concluí a aula 01 e agora estou mergulhando em Java!");
@@ -66,15 +64,16 @@ public class Challenge {
                               -----------------------------------  DESAFIO 04 ---------------------------------
                               ---------------------------------------------------------------------------------""");
 
-        System.out.println("Declare uma variável do tipo double precoProduto e uma variável do tipo int (quantidade)." +
-                " Calcule o valor total multiplicando o preço do produto pela \nquantidade e apresente o resultado " +
-                "em uma mensagem.\n");
+        System.out.println("""
+                Declare uma variável do tipo double precoProduto e uma variável do tipo int (quantidade).
+                Calcule o valor total multiplicando o preço do produto pela quantidade e apresente o resultado 
+                em uma mensagem.\n""");
 
         double precoProduto = 2.50;
         int quantidade = 5;
         double valorTotal = precoProduto * quantidade;
 
-        String texto04 = "O valor da compra é de R$ " + valorTotal;
+        String texto04 = "O valor da compra é de R$ " + valorTotal + "\n";
         System.out.println(texto04);
 
         System.out.println("""
@@ -82,7 +81,40 @@ public class Challenge {
                               -----------------------------------  DESAFIO 05 ---------------------------------
                               ---------------------------------------------------------------------------------""");
 
+        System.out.println("""
+                Declare uma variável do tipo double valorEmDolares. Atribua um valor em dólares a essa variável. 
+                Considere que o valor de 1 dólar é equivalente a 4.94 reais. Realize a conversão do valor em dólares 
+                para reais e imprima o resultado formatado.\n""");
 
+        double valorEmReal = 4.94;
+        double dollar = 5;
+        double converse = dollar * valorEmReal;
+
+        String texto05 = "1 dólar hoje está R$ " + valorEmReal + " e eu tenho U$D " + dollar + " para converter no " +
+                "valor de: R$ " + String.format("%.2f\n", converse);
+
+        System.out.println(texto05);
+
+        System.out.println("""
+                              ---------------------------------------------------------------------------------
+                              -----------------------------------  DESAFIO 06 ---------------------------------
+                              ---------------------------------------------------------------------------------""");
+
+        System.out.println("""
+                Declare uma variável do tipo double precoOriginal. Atribua um valor em reais a essa variável, 
+                representando o preço original de um produto. Em seguida, declare uma variável do tipo double 
+                percentualDesconto e atribua um valor percentual de desconto ao produto (por exemplo, 10 para 10%). 
+                Calcule o valor do desconto em reais, aplique-o ao preço original e imprima o novo preço com desconto.
+                """);
+
+        double precoOriginal = 275.54;
+        double percentualDeDesconto = 15;
+        double valorDesconto = precoOriginal * (percentualDeDesconto / 100);
+        double valorTotalDesconto = precoOriginal - valorDesconto;
+
+        System.out.printf("O valor do produto é de R$ %.2f e foi aplicado o desconto de %.0f%%. " +
+                        "O valor de desconto foi de R$ %.2f, totalizando R$ %.2f.\n",
+                precoOriginal, percentualDeDesconto, valorDesconto, valorTotalDesconto);
     }
 }
 
